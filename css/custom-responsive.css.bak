@@ -2,6 +2,7 @@
 	.logo{
 	padding:5% 0px 10%;
 	}	
+	
 }
 @media (max-width: 768px){
 	.logo{
@@ -16,6 +17,7 @@
 	.white_wrap table {
     width: 400px;
 	}
+	
 }
 
 @media (max-width: 480px){
@@ -28,7 +30,7 @@
 	}
 }
 
-@media (max-width: 350px){
+@media (max-width: 320px){
 	.logo {
     padding-top: 25%;
     width: 262px;
