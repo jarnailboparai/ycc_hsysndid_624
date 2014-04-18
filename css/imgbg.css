@@ -1,3 +1,7 @@
+.theme_bg
+{
+background-color:#fff;
+}
 @media (min-width: 400px) {
 .theme_bg
 {
@@ -5,7 +9,7 @@
 	pankajpanga
 	background-repeat:no-repeat;
 	background-size:cover;	
-	background-position:center;
+	background-position:center ;
 }
 }
 @media (min-width: 100px) and (max-width: 399px) {
@@ -13,8 +17,8 @@
 {
 	/*background-image:url(../images/port.jpg);*/
 	pangapankaj
-	background-repeat:no-repeat;
-	background-size:cover;	
-	background-position:center;
+	background-repeat:no-repeat !important;
+	background-size:cover !important;	
+	background-position:center !important;
 }
 }
