@@ -38,6 +38,36 @@
 
 <script>
 
+jQuery( document ).bind( "mobileinit", function() {
+
+    // Make your jQuery Mobile framework configuration changes here!
+
+
+
+    jQuery.mobile.allowCrossDomainPages = true;
+
+
+
+});
+
+
+
+$(document).ajaxStart(function() {
+
+    $.mobile.loading('show');
+
+});
+
+
+
+$(document).ajaxStop(function() {
+
+    $.mobile.loading('hide');
+
+});
+
+
+
 jQuery(document).ready(function(){
 
 	
@@ -58,15 +88,23 @@ jQuery(document).ready(function(){
 
 	        type: 'POST',
 
-	       url: actionUrl.action,
+	       	url: actionUrl.action,
+
+	       	//crossDomain:true,
+
+	      	dataType:'application/json; charset=utf-8',
 
 	        data: postData,
 
 	        success: function(response){
 
-				//alert('eee');
+					
 
-				var arg = JSON.parse(response);
+	        	var argtt = response.responseText;
+
+				var arg = JSON.parse(response.responseText);
+
+
 
 				if(arg.success==1)
 
@@ -92,11 +130,39 @@ jQuery(document).ready(function(){
 
 	        },
 
-	        error: function(){
+	        error: function(response){
 
-	            alert('error');
+				
 
-	        }
+	        	var argtt = response.responseText;
+
+				var arg = JSON.parse(response.responseText);
+
+
+
+				if(arg.success==1)
+
+				{
+
+					$('.squeeze_wrapper').hide();
+
+					$('.thankyou_msg').show();
+
+				}
+
+				else
+
+				{
+
+					$('.squeeze_wrapper').html("");
+
+					$('.squeeze_wrapper').html("<div class='no_data'>Error ! Please try after sometime</div>");
+
+				}
+
+	        	
+
+	        },
 
 	    }); 
 
@@ -156,9 +222,11 @@ img {
 
 <div class="squeeze_desc">
 
-No description found
+	No description found
 
 </div>
+
+<div class="squeeze_desc aweber_note">
 
     <form action="http://112.196.20.243:8021/members/wizard/index.php?r=aweber/addusertolist" method="POST" id='module-form-aweber'>
 
@@ -166,21 +234,45 @@ No description found
 
 	    <input name="list_id" type="hidden"  value="0" />
 
+	    <input name="app_id" type="hidden" value="624" />
+
+	    <input name="user_id" type="hidden"  value="36" />
+
+	    <input name="module_id" type="hidden" value="3791" />
+
+	    <input name="module_name" type="hidden"  value="Squeeze" />
+
 	    <input name="name" type="text" placeholder="Name" />
 
 	    <input name="email" type="text" placeholder="Email" />
 
+		
+
     	<input type="submit" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-b ui-mini" value="Submit" />
+
+    	We respect your privacy. Your email will never be sold. We hate spam as much as you. From time to time we will also email you with more tips and information.
 
     </form>
 
     </div>
 
- 
+    </div>
+
+ <div id="testing" class="testing" ></div>
 
   <!-- Squeeze Page Ends here -->
 
   
+
+  
+
+  <!-- thank you message -->
+
+  <div class="thankyou_msg">Thanks. Check your inbox for our email. We will be sending you the information now. If you don't see it then be sure to check your spam folder.</div>
+
+  
+
+  <!-- Thankyou message ends here -->
 
 </div>
 
