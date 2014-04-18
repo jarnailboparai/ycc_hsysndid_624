@@ -1,16 +1,13 @@
-
+body{
+	overflow-x:hidden;
+}
 .theme_bg{
-	background-image:url(../images/main_bg.jpg);
-	background-position:center bottom;
-	background-repeat:no-repeat;
-	min-width:320px;
-	background-color:#fff;
-	background-size: auto 100%;
+	background:url(../images/theme_background.jpg) center top;
 }
 .logo{
+	padding-top:28%;
 	transition:all ease .3s;
 	margin: 0 auto;
-	padding-top: 28%;
 }
 
 .ui-footer {
@@ -24,25 +21,23 @@
 	width:70px;
 	height:70px;
 	display:table-cell;
-	/*background:url(../images/icon_bg.png) no-repeat;*/
+	background-image:url('../images/icon_bg.png');
+	background-repeat:no-repeat;
+	background-size:100% 100%;
 	vertical-align:middle;
 	text-align:center;
 }
 .ui-header{
-	background:#dce1e5 !important;
+	background:url(../images/header_bg.png) !important;
 	border:none !important;
-	background-size:auto 100% !important;
-}
-.ui-header a{
-	box-shadow:none;
+	
 }
 .ui-header .ui-title, .ui-footer .ui-title{
 	text-shadow:none !important;
-	color:#0A2654 !important;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	font-size:26px;
-	margin:0 23%;
+	color:#fff !important;
+	font-size:24px;
+	font-weight:normal;
+	margin:0 2%;
 }
 .ui-icon-customrefresh:after {
 	background-image: url("../images/refresh_icon.png");
@@ -67,12 +62,21 @@
 }
 
 
-/* custom setting of icons */
-.app_feature_list a img{
+.app_feature_list a{
+	color:#fff !important;
+	text-decoration:none;
+	cursor:pointer !important;
+}
+.app_feature_list a label{
+	cursor:pointer !important;
+}
+.app_feature_list a.item  img{
 	max-height:32px;
 	max-width:32px;
 }
+/* EDIT BY AMITOJ 18-Feb */
 
 <!--themebgcolor-->
+
 
 
