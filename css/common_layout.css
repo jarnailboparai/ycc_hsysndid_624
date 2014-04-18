@@ -51,11 +51,10 @@ body {
     width: 80%;
     text-shadow:none !important;
     text-transform: capitalize;
-	color:#fff;
 }
 a.item{
 
-   /* background-image: url("../images/icon_bg.png");*/
+    background-image: url("../images/icon_bg.png");
 	background-repeat:no-repeat;
 	background-size:100% 100%;
     display: table-cell;
@@ -78,7 +77,6 @@ a.item{
 }
 .white_wrap .app_feature_list label{
 	height:auto;
-	cursor:pointer;
 }
 .app_feature_list a{
 	color:#fff !important;
@@ -86,6 +84,7 @@ a.item{
 	outline:none;
 	cursor:pointer;
 }
+
 
 /* loader setting */
 .ui-loader-default{
